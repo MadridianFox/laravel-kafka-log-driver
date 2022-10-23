@@ -1,0 +1,33 @@
+{
+    "name": "ensi/kafka-log-driver",
+    "description": "Kafka handler for Monolog",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ensi\\KafkaLogDriver\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Koryukov Ivan"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.1",
+        "ext-rdkafka": "*",
+        "monolog/monolog": "^2.4.0"
+    },
+    "require-dev": {
+        "kwn/php-rdkafka-stubs": "^0.0.1",
+        "orchestra/testbench": "8.0.x-dev"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ensi\\KafkaLogDriver\\KafkaLogDriverServiceProvider"
+            ]
+        }
+    }
+}
