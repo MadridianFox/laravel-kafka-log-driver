@@ -21,7 +21,7 @@
     },
     "require-dev": {
         "kwn/php-rdkafka-stubs": "^0.0.1",
-        "orchestra/testbench": "8.0.x-dev"
+        "laravel/framework": "^8.0"
     },
     "extra": {
         "laravel": {

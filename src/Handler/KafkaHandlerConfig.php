@@ -7,17 +7,6 @@ use RdKafka\Conf;
 class KafkaHandlerConfig
 {
     /**
-     * metadata.broker.list
-     * socket.timeout.ms 60000
-     * socket.connection.setup.timeout.ms 30000
-     * socket.keepalive.enable false
-     * sasl.mechanisms PLAIN
-     * security.protocol sasl_plaintext
-     * sasl.username
-     * sasl.password
-     * queue.buffering.max.messages 100000
-     * queue.buffering.max.ms 5
-     * message.send.max.retries 2147483647
      * @see https://github.com/edenhill/librdkafka/blob/master/CONFIGURATION.md
      * @param array $rawConfig
      */
@@ -34,11 +23,6 @@ class KafkaHandlerConfig
         }
 
         return $config;
-    }
-
-    public function getBrokerList(): string
-    {
-        return $this->rawConfig['broker_list'];
     }
 
     public function flushTimeoutMs(): int
